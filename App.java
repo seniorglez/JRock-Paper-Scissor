@@ -12,6 +12,7 @@ public class App {
         int userResponse = askTheUser();
         int pcResponse = askThePC();
         System.out.println("The PC choosed: " + translate(pcResponse) + "!");
+	System.out.println(getTheWinner(userResponse, pcResponse));
     }
 
     public static int askTheUser() {
@@ -46,7 +47,9 @@ public class App {
     }
 
     public static String getTheWinner(int userResponse, int pcResponse) {
-        if(userResponse == pcResponse) return "TIE!";
-        return "";
+        if( userResponse == pcResponse ) return "TIE!";
+	int diference = Math.abs(userResponse - pcResponse);
+	if( diference == 1 ) return (userResponse>pcResponse)?"User wins!":"PC wins!";
+	return (userResponse<pcResponse)?"User wins!":"PC wins!";
     }
 }
