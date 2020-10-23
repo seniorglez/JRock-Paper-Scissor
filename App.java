@@ -6,9 +6,12 @@ public class App {
     private static Scanner scanner;
     private static Random random;
 
-    public static void main(String[]args) {
+    static {
         scanner = new Scanner(System.in);
         random = new Random();
+    }
+
+    public static void main(String[]args) {
         int userResponse = askTheUser();
         int pcResponse = askThePC();
         System.out.println("The PC choosed: " + translate(pcResponse) + "!");
