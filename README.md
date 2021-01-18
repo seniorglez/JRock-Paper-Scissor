@@ -12,9 +12,10 @@ You only have to install java and a set properly the java path.
 ## Compile && Run
 
 In order to keep this simple we will compile the project from the command line:
-'''
+```
 javac App.java
-'''
+```
 To run it just call java
-'''
+```
 java App
+```
